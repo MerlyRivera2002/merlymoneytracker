@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ID -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="ID:"
+                android:textSize="16sp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/txtId"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- Tipo -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="Tipo:"
+                android:textSize="16sp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/txtTipo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Monto -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="Monto:"
+                android:textSize="16sp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/txtMonto"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <!-- Categoría -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="Categoría:"
+                android:textSize="16sp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/txtCategoria"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Descripción -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="Descripción:"
+                android:textSize="16sp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/txtDescripcion"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Fecha -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="Fecha:"
+                android:textSize="16sp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/txtFecha"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Método pago -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:text="Método pago:"
+                android:textSize="16sp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/txtMetodoPago"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Botones CRUD -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/btnCreate"
+                android:onClick="cmdCreate_onClick"
+                android:text="Crear"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnRead"
+                android:onClick="cmdGetById_onClick"
+                android:text="Buscar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:onClick="cmdUpdate_onClick"
+                android:text="Actualizar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:onClick="cmdDelete_onClick"
+                android:text="Eliminar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Botón para abrir categorías -->
+        <Button
+            android:id="@+id/btnOpenCategories"
+            android:onClick="openCategories"
+            android:text="Administrar Categorías"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</ScrollView>
+

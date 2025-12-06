@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ID -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="ID:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/txtId"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <!-- Tipo -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="Tipo:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/txtTipo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="DEBIT o CREDIT"/>
+        </LinearLayout>
+
+
+        <!-- Categoría -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="Categoría:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/txtCategoria"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <!-- Monto -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="Monto:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/txtMonto"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="numberDecimal"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <!-- Descripción -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="Descripción:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/txtDescripcion"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <!-- Fecha -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="Fecha:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/txtFecha"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <!-- Método de pago -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:text="Método:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/txtMetodoPago"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <!-- Botones -->
+        <Button
+            android:text="Crear"
+            android:onClick="cmdCreate_onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="Buscar por ID"
+            android:onClick="cmdGetById_onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="Actualizar"
+            android:onClick="cmdUpdate_onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="Eliminar"
+            android:onClick="cmdDelete_onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="Administrar Categorías"
+            android:onClick="openCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</ScrollView>
